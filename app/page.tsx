@@ -218,7 +218,7 @@ export default function Home() {
           </div>
         </section>
         {/* bottom space */}
-        <div className="h-[70px] w-full border-t-[1px] border-dashed border-[#ABABAB]"></div>
+        <div className="h-[65px] w-full border-t-[1px] border-dashed border-[#ABABAB]"></div>
 
       </div>
     </main>
