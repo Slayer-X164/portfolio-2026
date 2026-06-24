@@ -17,13 +17,13 @@ export function NavBar() {
         {/* Links */}
         <nav className="flex items-center gap-[10px]">
           <Link href="/about" className="rounded-sm flex items-center justify-center px-[10px] py-[5px] bg-neutral-50  hover:bg-blue-100 transition-colors">
-            <span className="font-sans text-[9px] sm:text-[12px] text-black">ABOUT</span>
+            <span className="font-sans  text-[9px] sm:text-[12px] text-black">ABOUT</span>
           </Link>
           <Link href="/projects" className="rounded-sm flex items-center justify-center px-[10px] py-[5px] bg-neutral-50  hover:bg-blue-100 transition-colors">
-            <span className="font-sans text-[9px] sm:text-[12px] text-black">PROJECTS</span>
+            <span className="font-sans  text-[9px] sm:text-[12px] text-black">PROJECTS</span>
           </Link>
           <Link href="/resume" className="rounded-sm flex items-center justify-center px-[10px] py-[5px] bg-neutral-50  hover:bg-blue-100 transition-colors">
-            <span className="font-sans text-[9px] sm:text-[12px] text-black">RESUME</span>
+            <span className="font-sans  text-[9px] sm:text-[12px] text-black">RESUME</span>
           </Link>
         </nav>
 
