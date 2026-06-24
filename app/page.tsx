@@ -2,6 +2,10 @@ import { SectionTag } from "@/components/SectionTag";
 import { TechnologyBadge } from "@/components/TechnologyBadge";
 import { ProjectCard } from "@/components/ProjectCard";
 import { PulsatingDot } from "@/components/PulsatingDot";
+import { EmailBadge } from "@/components/EmailBadge";
+import { FaGithub, FaLinkedin, FaXTwitter, FaLink } from "react-icons/fa6";
+import Link from "next/link";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -20,28 +24,24 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row items-start md:items-center gap-[10px]">
                   <span className="font-sans font-semibold text-[14px] text-[#9E9E9E] opacity-60">Software Engineer</span>
                   <div className="hidden sm:block w-[5px] h-[5px] rounded-full bg-[#9E9E9E]"></div>
-                  <div className="flex items-center justify-center px-[7px] py-[2px] gap-[7px] bg-[#F5F5F5] border-[1px] border-dashed border-[#D7D7D7] rounded-[3px]">
-                    <span className="font-mono text-[13px] text-[#9E9E9E]">siddheshghag150@gmail.com</span>
-                    <img src="/assets/icon-email.svg" className="w-[17px] h-[17px]" alt="Email" />
-                  </div>
+                  <EmailBadge email="siddheshghag150@gmail.com" />
                 </div>
               </div>
 
-              <p className="font-charon font-light text-[14px] text-[#000000] leading-snug">
+              <p className="font-charon font-light text-[14px] md:text-[13px] text-[#000000] leading-snug">
                 Full-Stack Software Engineer from India who enjoys the
                 process of building scalable end-to-end applications from scratch, debugging, maintaining and cloud deployment.
               </p>
 
               <div className="flex flex-row items-center gap-[15px]">
-                <div className="flex items-center gap-[5px] h-auto">
+                <div className="flex items-center gap-2 h-auto">
                   <PulsatingDot />
-                  <span className="font-charon-mono font-medium text-[12px] text-green-600">Open To Work</span>
+                  <span className="font-charon-mono  font-medium text-[13px] text-green-600">Open To Work</span>
                 </div>
-                <div className="flex items-end gap-[12px]">
-                  <a href="#"><img src="/assets/icon-github-social.svg" className="w-[14px] h-[14px]" alt="GitHub" /></a>
-                  <a href="#"><img src="/assets/icon-linkedin-social.svg" className="w-[14px] h-[14px]" alt="LinkedIn" /></a>
-                  <a href="#"><img src="/assets/icon-x-twitter.svg" className="w-[15.81px] h-[12.67px]" alt="X" /></a>
-                  <a href="#"><img src="/assets/icon-some-social.svg" className="w-[11.81px] h-[12.2px]" alt="Social" /></a>
+                <div className="flex items-center gap-[14px]">
+                  <Link href="https://github.com/Slayer-X164" className="text-[#727272] hover:text-[#0162EA] hover:-translate-y-[1px] transition-all duration-200"><FaGithub size={20} /></Link>
+                  <Link href="https://www.linkedin.com/in/siddhesh-ghag/" className="text-[#727272] hover:text-[#0162EA] hover:-translate-y-[1px] transition-all duration-200"><FaLinkedin size={20} /></Link>
+                  <Link href="https://x.com/FrontendDoc" className="text-[#727272] hover:text-[#0162EA] hover:-translate-y-[1px] transition-all duration-200"><FaXTwitter size={20} /></Link>
                 </div>
               </div>
             </div>
@@ -172,6 +172,8 @@ export default function Home() {
               imageBg="/assets/clauseguard-bg.png"
               imageFg="/assets/clauseguard-fg.png"
               technologies={["React.js", "TypeScript", "Python", "FastAPI", "Vercel", "OpenRouter", "Docker", "AWS", "Hugging Face"]}
+              liveLink="https://clauseguard.siddx.in"
+              repoLink="https://github.com/Slayer-X164/legal_contract_analyser_w_RAG"
             />
 
             <ProjectCard
@@ -180,6 +182,8 @@ export default function Home() {
               imageBg="/assets/affinote-bg.png"
               imageFg="/assets/affinote-fg.png"
               technologies={["Next.js", "TypeScript", "Tailwind CSS", "Supabase", "Razorpay", "PostgreSQL", "Resend", "ImageKit", "Cloudflare", "Redis", "Motion", "Zod"]}
+              liveLink="https://affinote.site"
+              repoLink="https://github.com/Slayer-X164/affinote"
             />
 
             <ProjectCard
@@ -188,35 +192,18 @@ export default function Home() {
               imageBg="/assets/ezyexpense-bg.png"
               imageFg="/assets/ezyexpense-fg.png"
               technologies={["Next.js", "TypeScript", "MongoDB", "Mongoose", "Tailwind CSS", "Axios", "NextAuth", "Redux", "Motion", "Vercel", "Zod"]}
+              liveLink="https://ezy-expense-omega.vercel.app/"
+              repoLink="https://github.com/Slayer-X164/ezy_expense"
             />
 
-            <a href="#" className="self-start flex items-center gap-[4px] px-[10px] py-[3px] bg-[#EDEDED] border-[0.7px] border-[#D0D0D0]">
+            <a href="/projects" className="self-start flex items-center gap-[4px] px-[10px] py-[3px] bg-[#EDEDED] border-[0.7px] border-[#D0D0D0]">
               <span className="font-sans text-[12.67px] text-[#000000]">View all Projects</span>
               <img src="/assets/icon-arrow-bottom-left.svg" className="w-[13.37px] h-[13.37px]" alt="Arrow" />
             </a>
           </div>
         </section>
 
-        {/* Footer Section */}
-        <section className="h-auto min-h-[159px] py-6 md:py-0 w-full relative flex items-center justify-center overflow-hidden">
-          {/* Background Dots */}
-          <img src="/assets/footer-left-dot.svg" className="absolute left-[-60px] md:left-[-5px] top-[60px] w-[236.65px] opacity-50 block" alt="" />
-          <img src="/assets/footer-right-dot.svg" className="absolute right-[-90px] md:right-[-9px] top-[-8px] w-70 opacity-50 block" alt="" />
-
-          <div className="flex flex-col items-center gap-[8px] z-10">
-            <div className="flex flex-col items-center gap-[3px]">
-              <span className="font-sans text-[13px] text-[#8C8C8C] text-center">Mumbai, 8:43 PM</span>
-              <h2 className="font-serif text-[30px] text-[#000000] leading-none">Siddhesh Ghag</h2>
-            </div>
-            <div className="flex flex-col items-center justify-center px-[17px] py-[8px] gap-[5px]">
-              <span className="font-sans text-[13px] text-[#000000]">Connect With Me</span>
-              <div className="flex items-end gap-3">
-                <a href="#"><img src="/assets/icon-linkedin-footer.svg" className="w-[20px]" alt="LinkedIn" /></a>
-                <a href="#"><img src="/assets/icon-x-footer.svg" className="w-[20px]" alt="X" /></a>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Footer />
         {/* bottom space */}
         <div className="h-[65px] w-full border-t-[1px] border-dashed border-[#ABABAB]"></div>
 

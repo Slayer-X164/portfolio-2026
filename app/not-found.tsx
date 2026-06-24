@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { Footer } from "@/components/Footer";
 
 export default function NotFound() {
   return (
@@ -23,7 +24,6 @@ export default function NotFound() {
             <img src="/assets/icon-arrow-bottom-left.svg" className="w-[12px] h-[12px] rotate-[-135deg]" alt="Return" />
           </Link>
         </section>
-
 
 
         {/* bottom space */}

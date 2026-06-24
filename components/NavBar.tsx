@@ -1,7 +1,17 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
+import { usePathname } from "next/navigation";
 
 export function NavBar() {
+  const pathname = usePathname();
+  const validPaths = ["/", "/projects", "/about", "/resume"];
+
+  if (!validPaths.includes(pathname)) {
+    return null;
+  }
+
   return (
     <div className="fixed bottom-[10px] left-1/2 -translate-x-1/2 z-50 ">
       <div className="max-w-[310px] sm:max-w-[500px] flex items-center gap-[10px] px-[10px] py-[9px] bg-blue-600 border-[1px] border-dashed border-white  backdrop-blur-md">
