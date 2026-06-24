@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Instrument_Sans, Instrument_Serif, Inria_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { NavBar } from "@/components/NavBar";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -41,6 +42,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen text-[#000000] font-sans selection:bg-[#0161EA] selection:text-white">
         {children}
+        <NavBar />
       </body>
     </html>
   );

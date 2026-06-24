@@ -11,9 +11,9 @@ interface ProjectCardProps {
 
 export function ProjectCard({ title, description, imageBg, imageFg, technologies }: ProjectCardProps) {
   return (
-    <div className="flex w-full  items-center justify-center gap-[19.68px] p-[20px] bg-[#FFFFFF] border-[1px] border-dashed border-[rgba(0,0,0,0.42)]">
+    <div className="flex flex-col md:flex-row w-full items-center justify-center gap-[19.68px] p-[20px] bg-[#FFFFFF] border-[1px] border-dashed border-[rgba(0,0,0,0.42)]">
       {/* Image Container */}
-      <div className=" w-[311.18px] h-[178.09px] flex-shrink-0 overflow-hidden">
+      <div className="w-full md:w-[311.18px] h-[178.09px] flex-shrink-0 overflow-hidden">
         <div
           className="w-full h-full bg-cover bg-center flex items-end justify-center"
           style={{ backgroundImage: `url(${imageBg})` }}
@@ -23,10 +23,10 @@ export function ProjectCard({ title, description, imageBg, imageFg, technologies
       </div>
 
       {/* Content Container */}
-      <div className="flex flex-col justify-between w-[267.13px] h-[178.09px]">
+      <div className="flex flex-col justify-between w-full md:w-[267.13px] h-auto md:h-[178.09px] gap-4 md:gap-0">
         {/* Header */}
         <div className="flex items-center justify-between w-full">
-          <h3 className="font-serif text-[18.75px] text-[#000000]">{title}</h3>
+          <h3 className="font-serif text-[24px] text-[#000000]">{title}</h3>
           <div className="flex items-center gap-[7.45px]">
             <a href="#" className="flex items-center justify-center px-[4.96px] py-[1.87px] gap-[2.48px] bg-[#EDEDED] border border-[#D0D0D0]">
               <span className="font-sans text-[11.58px] text-[#000000]">Live</span>

@@ -1,23 +1,25 @@
 import { SectionTag } from "@/components/SectionTag";
 import { TechnologyBadge } from "@/components/TechnologyBadge";
 import { ProjectCard } from "@/components/ProjectCard";
+import { PulsatingDot } from "@/components/PulsatingDot";
 
 export default function Home() {
   return (
     <main className="w-full flex justify-center  bg-[#FFFFFF]">
       {/* Main Container */}
-      <div className="w-[701px] flex flex-col border-[1px] border-dashed border-[#ABABAB] relative overflow-hidden bg-[#FFFFFF]">
-
+      <div className="w-full max-w-[701px] flex flex-col border-[1px] border-dashed border-[#ABABAB] relative overflow-hidden bg-[#FFFFFF]">
+        {/* top space */}
+        <div className="h-[60px] w-full border-b-[1px] border-dashed border-[#ABABAB]"></div>
         {/* Hero Section */}
-        <section className="h-auto w-full border-b-[1px] border-dashed border-[#ABABAB] relative flex items-center">
-          <div className="w-[635px] flex justify-between items-end mx-auto mt-[42px] mb-[52px]">
+        <section className="h-auto  w-full border-b-[1px] border-dashed border-[#ABABAB] relative flex items-center">
+          <div className="w-full max-w-[635px] flex flex-col-reverse md:flex-row justify-between items-start md:items-center md:items-end mx-auto px-4 md:px-0 mt-[42px] mb-[52px] gap-8 md:gap-0">
             {/* Left Content */}
-            <div className="w-[409px] h-[206px] flex flex-col justify-between">
+            <div className="w-full text-left md:text-center md:w-[409px] h-auto md:h-[206px] flex flex-col justify-between gap-6 md:gap-0 items-start md:items-start text-center md:text-left">
               <div className="flex flex-col gap-[6px]">
-                <h1 className="font-serif text-[50px] leading-none text-[#000000]">Hey, i’m Sidd.              </h1>
-                <div className="flex items-center gap-[10px]">
+                <h1 className="font-serif text-[40px] md:text-[50px] leading-none text-[#000000]">Hey, i’m Sidd.              </h1>
+                <div className="flex flex-col sm:flex-row items-start md:items-center gap-[10px]">
                   <span className="font-sans font-semibold text-[14px] text-[#9E9E9E] opacity-60">Software Engineer</span>
-                  <div className="w-[5px] h-[5px] rounded-full bg-[#9E9E9E]"></div>
+                  <div className="hidden sm:block w-[5px] h-[5px] rounded-full bg-[#9E9E9E]"></div>
                   <div className="flex items-center justify-center px-[7px] py-[2px] gap-[7px] bg-[#F5F5F5] border-[1px] border-dashed border-[#D7D7D7] rounded-[3px]">
                     <span className="font-mono text-[13px] text-[#9E9E9E]">siddheshghag150@gmail.com</span>
                     <img src="/assets/icon-email.svg" className="w-[17px] h-[17px]" alt="Email" />
@@ -30,10 +32,10 @@ export default function Home() {
                 process of building scalable end-to-end applications from scratch, debugging, maintaining and cloud deployment.
               </p>
 
-              <div className="flex items-center gap-[15px]">
+              <div className="flex flex-row items-center gap-[15px]">
                 <div className="flex items-center gap-[5px] h-auto">
-                  <img src="/assets/open-dot.svg" className="w-[8px] h-[8px]" alt="Open" />
-                  <span className="font-charon-mono font-medium text-[12px] text-[#50B463]">Open To Work</span>
+                  <PulsatingDot />
+                  <span className="font-charon-mono font-medium text-[12px] text-green-600">Open To Work</span>
                 </div>
                 <div className="flex items-end gap-[12px]">
                   <a href="#"><img src="/assets/icon-github-social.svg" className="w-[14px] h-[14px]" alt="GitHub" /></a>
@@ -45,33 +47,33 @@ export default function Home() {
             </div>
 
             {/* Right Avatar */}
-            <div className="w-[206px] h-[206px] rounded-[15px] border-[4.31px] border-[#AFCAFF] overflow-hidden flex-shrink-0">
+            <div className="w-[150px] md:w-[206px] h-[150px] md:h-[206px] rounded-[15px] border-[4.31px] border-[#AFCAFF] overflow-hidden flex-shrink-0">
               <img src="/assets/hero-avatar.png" className="w-full h-full object-cover" alt="Siddhesh Ghag" />
             </div>
           </div>
         </section>
 
         {/* Experience Section */}
-        <section className="h-auto w-full border-b-[1px] border-dashed border-[#ABABAB] flex flex-col py-[30px] px-[30px]">
+        <section className="h-auto w-full border-b-[1px] border-dashed border-[#ABABAB] flex flex-col py-[30px] px-4 md:px-[30px]">
           <SectionTag text="Experience" width="w-[134px]" />
-          <div className="mt-[26px] flex w-full gap-[17px]">
-            <div className="w-[39px] h-[39px] rounded-[7.22px] bg-[#A1A1A1] flex-shrink-0 overflow-hidden">
+          <div className="mt-[26px] flex flex-col sm:flex-row  w-full gap-[17px]">
+            <div className="w-[39px] h-[39px] rounded-[7.22px] bg-[#A1A1A1] flex-shrink-0 overflow-hidden  ">
               <img src="/assets/oceanlab.png" className="w-full h-full object-cover" alt="Oceanlab" />
             </div>
-            <div className="w-[564px] flex flex-col gap-[10px]">
-              <div className="flex flex-col gap-[6px] w-full">
-                <div className="flex justify-between items-center w-full">
-                  <h3 className="font-sans font-bold text-[18px] text-[#000000]">Oceanlab Technology</h3>
-                  <span className="font-sans italic text-[13.3px] text-[#737373]">Oct 2025 - Nov 2025</span>
+            <div className="w-full md:w-[564px] flex flex-col gap-[10px] items-center sm:items-start text-center sm:text-left">
+              <div className="flex flex-col gap-[6px] w-full items-start text-center sm:text-left">
+                <div className="flex flex-row justify-between items-start w-full gap-2 sm:gap-0">
+                  <h3 className="font-sans font-bold text-[13px] text-[#000000]">Oceanlab Technology</h3>
+                  <span className="font-sans italic text-[11px] text-[#737373]">Oct 2025 - Nov 2025</span>
                 </div>
-                <div className="w-[122.59px] h-[24.93px] bg-[#006BFF] border-[0.83px] border-dashed border-[#FFFFFF] flex items-center justify-center">
-                  <span className="font-sans font-semibold text-[13.3px] text-[#FFFFFF]">Frontend <span className="italic">intern</span></span>
+                <div className="px-4 py-1 bg-[#006BFF] border-[0.83px] border-dashed border-[#FFFFFF] flex items-center justify-center">
+                  <span className="font-sans font-semibold text-[12px] text-[#FFFFFF]">Frontend <span className="italic">intern</span></span>
                 </div>
               </div>
-              <p className="font-inria text-[14px] text-[#585858] leading-relaxed whitespace-pre-wrap">
-                <span className="font-bold text-[#585858] ">• </span>Designed and developed responsive user interfaces from <span className="font-bold text-[#060606]">Figma</span> designs using <span className="font-bold text-[#000000]">React</span> and <span className="font-bold text-[#000000]">Next.js</span>, delivering pixel-perfect implementations.<br/>
-                <span className="font-bold text-[#585858] ">• </span>Built clean, maintainable, and high-performance frontend code to enhance user <span className="font-bold text-[#000000]">experience</span> and application performance.<br/>
-                <span className="font-bold text-[#585858] ">• </span>Created the company&apos;s <span className="font-bold text-[#000000]">logo</span> and contributed to the overall <span className="font-bold text-[#000000]">brand identity</span> and visual design.<br/>
+              <p className="font-inria text-[14px] text-left text-[#585858] leading-relaxed whitespace-pre-wrap">
+                <span className="font-bold text-[#585858] ">• </span>Designed and developed responsive user interfaces from <span className="font-bold text-[#060606]">Figma</span> designs using <span className="font-bold text-[#000000]">React</span> and <span className="font-bold text-[#000000]">Next.js</span>, delivering pixel-perfect implementations.<br />
+                <span className="font-bold text-[#585858] ">• </span>Built clean, maintainable, and high-performance frontend code to enhance user <span className="font-bold text-[#000000]">experience</span> and application performance.<br />
+                <span className="font-bold text-[#585858] ">• </span>Created the company&apos;s <span className="font-bold text-[#000000]">logo</span> and contributed to the overall <span className="font-bold text-[#000000]">brand identity</span> and visual design.<br />
                 <span className="font-bold text-[#585858] ">• </span>Provided design direction and collaborated with <span className="font-bold text-[#000000]">cross-functional teams</span> to improve product <span className="font-bold text-[#000000]">quality</span> and design consistency.
               </p>
             </div>
@@ -79,14 +81,14 @@ export default function Home() {
         </section>
 
         {/* Technologies Section */}
-        <section className="h-auto w-full border-b-[1px] border-dashed border-[#ABABAB] flex flex-col py-[30px] px-[30px]">
+        <section className="h-auto w-full border-b-[1px] border-dashed border-[#ABABAB] flex flex-col py-[30px] px-4 md:px-[30px]">
           <SectionTag text="Technologies" width="w-[144px]" />
-          <div className="mt-[18px] flex flex-col gap-[17px] w-full">
+          <div className="mt-[18px] flex flex-col gap-[17px] w-full items-start text-left">
 
             {/* LANGUAGES */}
-            <div className="flex flex-col gap-[7px] w-full">
+            <div className="flex flex-col gap-[7px] w-full items-start text-left">
               <span className="font-sans font-medium text-[12px] tracking-[0.21em] text-[#A8A5A5]">LANGUAGES</span>
-              <div className="flex flex-wrap gap-[7.57px]">
+              <div className="flex flex-wrap justify-start gap-[7.57px]">
                 <TechnologyBadge icon="/assets/icon-javascript.svg" text="JavaScript" />
                 <TechnologyBadge icon="/assets/icon-java.svg" text="Java" />
                 <TechnologyBadge icon="/assets/icon-typescript.svg" text="TypeScript" />
@@ -95,9 +97,9 @@ export default function Home() {
             </div>
 
             {/* FRONTEND */}
-            <div className="flex flex-col gap-[7px] w-full">
+            <div className="flex flex-col gap-[7px] w-full items-start text-left">
               <span className="font-sans font-medium text-[12px] tracking-[0.21em] text-[#A8A5A5]">FRONTEND</span>
-              <div className="flex flex-wrap gap-[7.57px]">
+              <div className="flex flex-wrap justify-start gap-[7.57px]">
                 <TechnologyBadge icon="/assets/icon-react.svg" text="React.js" />
                 <TechnologyBadge icon="/assets/icon-nextjs.svg" text="Next.js" />
                 <TechnologyBadge icon="/assets/icon-tailwindcss.svg" text="Tailwind CSS" />
@@ -108,29 +110,28 @@ export default function Home() {
             </div>
 
             {/* BACKEND & DB */}
-            <div className="flex flex-col gap-[7px] w-full">
+            <div className="flex flex-col gap-[7px] w-full items-start text-left">
               <span className="font-sans font-medium text-[12px] tracking-[0.21em] text-[#A8A5A5]">BACKEND & DB</span>
               <div className="flex flex-col gap-[10px]">
-                <div className="flex flex-wrap gap-[7.57px]">
+                <div className="flex flex-wrap justify-start gap-[7.57px]">
                   <TechnologyBadge icon="/assets/icon-nodejs.svg" text="Node.js" borderDashed={false} />
                   <TechnologyBadge icon="/assets/icon-express.svg" text="Express.js" borderDashed={false} />
                   <TechnologyBadge icon="/assets/icon-fastapi.svg" text="FastAPI" borderDashed={false} />
                   <TechnologyBadge icon="/assets/icon-drizzle.svg" text="Drizzle" borderDashed={false} />
                   <TechnologyBadge icon="/assets/icon-zod.svg" text="Zod" borderDashed={false} />
                   <TechnologyBadge icon="/assets/icon-postgresql.svg" text="PostgreSQL" borderDashed={false} />
-                </div>
-                <div className="flex flex-wrap gap-[7.57px]">
                   <TechnologyBadge icon="/assets/icon-redis.svg" text="Redis" borderDashed={false} />
                   <TechnologyBadge icon="/assets/icon-mongodb.svg" text="MongoDB" />
                   <TechnologyBadge icon="/assets/icon-supabase.svg" text="Supabase" />
                 </div>
+
               </div>
             </div>
 
             {/* AI */}
-            <div className="flex flex-col gap-[7px] w-full">
+            <div className="flex flex-col gap-[7px] w-full items-start text-left">
               <span className="font-sans font-medium text-[12px] tracking-[0.21em] text-[#A8A5A5]">AI</span>
-              <div className="flex flex-wrap gap-[7.57px]">
+              <div className="flex flex-wrap justify-start gap-[7.57px]">
                 <TechnologyBadge icon="/assets/icon-langchain.svg" text="LangChain" />
                 <TechnologyBadge icon="/assets/icon-langgraph.svg" text="LangGraph" />
                 <TechnologyBadge icon="/assets/openrouter.png" text="OpenRouter" />
@@ -139,10 +140,10 @@ export default function Home() {
             </div>
 
             {/* INFRA & TOOLS */}
-            <div className="flex flex-col gap-[7px] w-full">
+            <div className="flex flex-col gap-[7px] w-full items-start text-left">
               <span className="font-sans font-medium text-[12px] tracking-[0.21em] text-[#A8A5A5]">INFRA & TOOLS</span>
               <div className="flex flex-col gap-[10px]">
-                <div className="flex flex-wrap gap-[7.57px]">
+                <div className="flex flex-wrap justify-start gap-[7.57px]">
                   <TechnologyBadge icon="/assets/icon-docker.svg" text="Docker" borderDashed={false} />
                   <TechnologyBadge icon="/assets/icon-github.svg" text="GitHub" borderDashed={false} />
                   <TechnologyBadge icon="/assets/icon-vercel.svg" text="Vercel" borderDashed={false} />
@@ -161,10 +162,10 @@ export default function Home() {
         </section>
 
         {/* Things I've Built Section */}
-        <section className="h-auto w-full border-b-[1px] border-dashed border-[#ABABAB] flex flex-col py-[30px] px-[30px]">
+        <section className="h-auto w-full border-b-[1px] border-dashed border-[#ABABAB] flex flex-col py-[30px] px-4 md:px-[30px]">
           <SectionTag text="Things I’ve Built" width="w-[161px]" />
 
-          <div className="mt-[27px] flex flex-col gap-[31px] w-[636px]">
+          <div className="mt-[27px] flex flex-col gap-[31px] w-full md:w-[636px]">
             <ProjectCard
               title="ClauseGuard"
               description="an AI-powered contract analysis platform to simplify complex legal clauses and identify potential risks and also suggest better rewrites using RAG"
@@ -197,25 +198,27 @@ export default function Home() {
         </section>
 
         {/* Footer Section */}
-        <section className="h-[159px] w-full relative flex items-center justify-center overflow-hidden">
+        <section className="h-auto min-h-[159px] py-6 md:py-0 w-full relative flex items-center justify-center overflow-hidden">
           {/* Background Dots */}
-          <img src="/assets/footer-left-dot.svg" className="absolute left-[-5px] top-[45px] w-[236.65px] opacity-50" alt="" />
-          <img src="/assets/footer-right-dot.svg" className="absolute right-[-9px] top-[-9px] w-[246.2px] opacity-50" alt="" />
+          <img src="/assets/footer-left-dot.svg" className="absolute left-[-60px] md:left-[-5px] top-[60px] w-[236.65px] opacity-50 block" alt="" />
+          <img src="/assets/footer-right-dot.svg" className="absolute right-[-90px] md:right-[-9px] top-[-8px] w-70 opacity-50 block" alt="" />
 
-          <div className="flex flex-col items-center gap-[10px] z-10">
+          <div className="flex flex-col items-center gap-[8px] z-10">
             <div className="flex flex-col items-center gap-[3px]">
-              <span className="font-sans text-[10px] text-[#8C8C8C] text-center">Mumbai, 8:43 PM</span>
+              <span className="font-sans text-[13px] text-[#8C8C8C] text-center">Mumbai, 8:43 PM</span>
               <h2 className="font-serif text-[30px] text-[#000000] leading-none">Siddhesh Ghag</h2>
             </div>
-            <div className="flex flex-col items-center justify-center px-[17px] py-[8px] gap-[8px]">
-              <span className="font-sans text-[12px] text-[#000000]">Connect With Me</span>
-              <div className="flex items-end gap-[5.93px]">
-                <a href="#"><img src="/assets/icon-linkedin-footer.svg" className="w-[10.37px] h-[10.37px]" alt="LinkedIn" /></a>
-                <a href="#"><img src="/assets/icon-x-footer.svg" className="w-[11.72px] h-[9.39px]" alt="X" /></a>
+            <div className="flex flex-col items-center justify-center px-[17px] py-[8px] gap-[5px]">
+              <span className="font-sans text-[13px] text-[#000000]">Connect With Me</span>
+              <div className="flex items-end gap-3">
+                <a href="#"><img src="/assets/icon-linkedin-footer.svg" className="w-[20px]" alt="LinkedIn" /></a>
+                <a href="#"><img src="/assets/icon-x-footer.svg" className="w-[20px]" alt="X" /></a>
               </div>
             </div>
           </div>
         </section>
+        {/* bottom space */}
+        <div className="h-[70px] w-full border-t-[1px] border-dashed border-[#ABABAB]"></div>
 
       </div>
     </main>
