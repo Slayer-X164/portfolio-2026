@@ -50,3 +50,52 @@
   }
 }
 
+@keyframes sprite-walk-48-6f {
+  from {
+    background-position: 0px;
+  }
+
+  to {
+    background-position: -288px;
+  }
+}
+
+@keyframes sprite-idle-48-4f {
+  from {
+    background-position: 0px;
+  }
+
+  to {
+    background-position: -192px;
+  }
+}
+
+@keyframes sprite-walk-32-6f {
+  from {
+    background-position: 0px;
+  }
+
+  to {
+    background-position: -192px;
+  }
+}
+
+@keyframes sprite-walk-32-4f {
+  from {
+    background-position: 0px;
+  }
+
+  to {
+    background-position: -128px;
+  }
+}
+
+@keyframes sprite-idle-32-4f {
+  from {
+    background-position: 0px;
+  }
+
+  to {
+    background-position: -128px;
+  }
+}

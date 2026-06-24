@@ -6,6 +6,7 @@ import { EmailBadge } from "@/components/EmailBadge";
 import { FaGithub, FaLinkedin, FaXTwitter, FaLink } from "react-icons/fa6";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
+import { PixelPets } from "@/components/PixelPets";
 
 export default function Home() {
   return (
@@ -13,7 +14,9 @@ export default function Home() {
       {/* Main Container */}
       <div className="w-full max-w-[701px] flex flex-col border-[1px] border-dashed border-[#ABABAB] relative overflow-hidden bg-[#FFFFFF]">
         {/* top space */}
-        <div className="h-[60px] w-full border-b-[1px] border-dashed border-[#ABABAB]"></div>
+        <div className="h-[60px] w-full border-b-[1px] border-dashed border-[#ABABAB] relative">
+          <PixelPets />
+        </div>
         {/* Hero Section */}
         <section className="h-auto  w-full border-b-[1px] border-dashed border-[#ABABAB] relative flex items-center">
           <div className="w-full max-w-[635px] flex flex-col-reverse md:flex-row justify-between items-start md:items-center md:items-end mx-auto px-4 md:px-0 mt-[42px] mb-[52px] gap-8 md:gap-0">
