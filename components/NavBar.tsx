@@ -12,10 +12,10 @@ export function NavBar() {
         </Link>
 
         {/* Divider */}
-        <div className="w-[0.5px] h-[15px] bg-[#E1E1E1]"></div>
+        {/* <div className="w-[0.5px] h-[15px] bg-[#E1E1E1]"></div> */}
 
         {/* Links */}
-        <nav className="flex items-center gap-[10px]">
+        <nav className="flex items-center gap-[10px] border-x px-3 border-blue-200">
           <Link href="/about" className="rounded-sm flex items-center justify-center px-[10px] py-[5px] bg-neutral-50  hover:bg-blue-100 transition-colors">
             <span className="font-sans  text-[9px] sm:text-[12px] text-black">ABOUT</span>
           </Link>
@@ -28,7 +28,7 @@ export function NavBar() {
         </nav>
 
         {/* Divider */}
-        <div className="w-[0.5px] h-[15px] bg-[#E1E1E1]"></div>
+        {/* <div className="w-[0.5px] h-[15px] bg-[#E1E1E1]"></div> */}
 
         {/* Theme Toggle Icon */}
         <button className="flex items-center justify-center sm:w-[30px] w-[25px] h-[25px] sm:h-[30px] rounded-full hover:bg-[rgba(111, 111, 111, 0.84)] transition-colors">
