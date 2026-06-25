@@ -168,7 +168,7 @@ export default function Home() {
         <section className="h-auto w-full border-b-[1px] border-dashed border-[#ABABAB] flex flex-col py-[30px] px-4 md:px-[30px]">
           <SectionTag text="Things I’ve Built" width="w-[161px]" />
 
-          <div className="mt-[27px] flex flex-col gap-[31px] w-full md:w-[636px]">
+          <div className="mt-[27px] flex flex-col  gap-[31px] w-full md:w-[636px]">
             <ProjectCard
               title="ClauseGuard"
               description="an AI-powered contract analysis platform to simplify complex legal clauses and identify potential risks and also suggest better rewrites using RAG"
@@ -199,10 +199,12 @@ export default function Home() {
               repoLink="https://github.com/Slayer-X164/ezy_expense"
             />
 
-            <a href="/projects" className="self-start flex items-center gap-[4px] px-[10px] py-[3px] bg-[#EDEDED] border-[0.7px] border-[#D0D0D0]">
-              <span className="font-sans text-[12.67px] text-[#000000]">View all Projects</span>
-              <img src="/assets/icon-arrow-bottom-left.svg" className="w-[13.37px] h-[13.37px]" alt="Arrow" />
-            </a>
+            <div className="flex item-center justify-end">
+              <a href="/projects" className="self-start flex items-center gap-[4px] px-[10px] py-[3px] bg-[#EDEDED] border-[0.7px] border-[#D0D0D0]">
+                <span className="font-sans text-[12.67px] text-[#000000]">View all Projects</span>
+                <img src="/assets/icon-arrow-bottom-left.svg" className="w-[13.37px] h-[13.37px]" alt="Arrow" />
+              </a>
+            </div>
           </div>
         </section>
 

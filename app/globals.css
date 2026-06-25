@@ -99,3 +99,23 @@
     background-position: -128px;
   }
 }
+
+@keyframes sprite-attack-48-4f {
+  from {
+    background-position: 0px;
+  }
+
+  to {
+    background-position: -192px;
+  }
+}
+
+@keyframes sprite-hurt-48-2f {
+  from {
+    background-position: 0px;
+  }
+
+  to {
+    background-position: -96px;
+  }
+}

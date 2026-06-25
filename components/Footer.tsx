@@ -1,6 +1,27 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 
 export function Footer() {
+  const [mumbaiTime, setMumbaiTime] = useState("");
+
+  useEffect(() => {
+    const updateTime = () => {
+      const date = new Date();
+      const formatter = new Intl.DateTimeFormat("en-US", {
+        timeZone: "Asia/Kolkata",
+        hour: "numeric",
+        minute: "numeric",
+        second: "2-digit",
+        hour12: true,
+      });
+      setMumbaiTime(formatter.format(date));
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="h-auto min-h-[159px] py-6 md:py-0 w-full relative flex items-center justify-center overflow-hidden">
       {/* Background Dots */}
@@ -8,11 +29,11 @@ export function Footer() {
       <img src="/assets/footer-right-dot.svg" className="absolute right-[-90px] md:right-[-9px] top-[-8px] w-70 opacity-50 block" alt="" />
 
       <div className="flex flex-col items-center gap-[8px] z-10">
-        <div className="flex flex-col items-center gap-[3px]">
-          <span className="font-sans text-[13px] text-[#8C8C8C] text-center">Mumbai, 8:43 PM</span>
+        <div className="flex flex-col items-center gap-[4px]">
+          <span className="font-sans text-[13px] text-[#8C8C8C] text-center">Mumbai, {mumbaiTime || "8:43 PM"}</span>
           <h2 className="font-serif text-[30px] text-[#000000] leading-none">Siddhesh Ghag</h2>
         </div>
-        <div className="flex flex-col items-center justify-center px-[17px] py-[8px] gap-[5px]">
+        <div className="flex flex-col items-center justify-center px-[17px] py-[8px] gap-[4px]">
           <span className="font-sans text-[13px] text-[#000000]">Connect With Me</span>
           <div className="flex items-end gap-3">
             <a href="https://www.linkedin.com/in/siddhesh-ghag/" target="_blank" rel="noreferrer"><img src="/assets/icon-linkedin-footer.svg" className="w-[19px]" alt="LinkedIn" /></a>
