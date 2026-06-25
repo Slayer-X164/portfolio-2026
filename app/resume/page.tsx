@@ -27,7 +27,7 @@ export default function Resume() {
               {/* Resume PDF Viewer */}
               <div className="w-full h-[500px] md:h-[650px] border-[1px] border-dashed border-[#ABABAB] flex justify-center overflow-hidden">
                 <iframe
-                  src="/assets/siddhesh_ghag_(Resume).pdf"
+                  src="https://drive.google.com/file/d/1Fgs1DrkyMe9H88EiX-6fis_A7ROjRVey/preview"
                   className="w-full h-full border-none"
                   allow="autoplay"
                 ></iframe>
