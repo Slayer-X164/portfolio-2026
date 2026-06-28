@@ -27,21 +27,7 @@
   --color-text-light: #737373;
 }
 
-@layer base {
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-    font-family: var(--font-sans);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  
-  *, *::before, *::after {
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
-  }
-}
+
 
 .font-charon {
   font-family: "Iosevka Charon", var(--font-jetbrains-mono), monospace;
