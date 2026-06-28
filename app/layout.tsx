@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Instrument_Sans, Instrument_Serif, Inria_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { NavBar } from "@/components/NavBar";
+import { ZustandThemeProvider } from "@/components/ZustandThemeProvider";
 
 const instrumentSans = Instrument_Sans({
   variable: "--font-instrument-sans",
@@ -38,11 +39,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${instrumentSans.variable} ${instrumentSerif.variable} ${inriaSans.variable} ${jetbrainsMono.variable} antialiased bg-[#FFFFFF]`}
+      className={`${instrumentSans.variable} ${instrumentSerif.variable} ${inriaSans.variable} ${jetbrainsMono.variable} antialiased bg-[#FFFFFF] dark:bg-[#121212]`}
     >
-      <body className="min-h-screen text-[#000000] font-sans selection:bg-[#0161EA] selection:text-white">
-        {children}
-        <NavBar />
+      <body className="min-h-screen text-[#000000] dark:text-[#FFFFFF] font-sans selection:bg-[#0161EA] selection:text-white">
+        <ZustandThemeProvider>
+          {children}
+          <NavBar />
+        </ZustandThemeProvider>
       </body>
     </html>
   );

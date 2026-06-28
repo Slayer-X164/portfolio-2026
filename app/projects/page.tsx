@@ -4,18 +4,18 @@ import { Footer } from "@/components/Footer";
 
 export default function Projects() {
   return (
-    <main className="w-full flex justify-center bg-[#FFFFFF]">
+    <main className="w-full min-h-screen flex justify-center bg-[#FFFFFF] dark:bg-[#121212]">
       {/* Main Container */}
-      <div className="w-full max-w-[701px] flex flex-col border-[1px] border-dashed border-[#ABABAB] relative overflow-hidden bg-[#FFFFFF]">
+      <div className="w-full max-w-[701px] flex flex-col border-[1px] border-dashed border-[#ABABAB] dark:border-[#444444] relative overflow-hidden bg-[#FFFFFF] dark:bg-[#121212]">
         {/* top space */}
-        <div className="h-[60px] w-full border-b-[1px] border-dashed border-[#ABABAB]"></div>
+        <div className="h-[60px] w-full border-b-[1px] border-dashed border-[#ABABAB] dark:border-[#444444]"></div>
 
         {/* Content Section (Header + Projects) */}
-        <section className="w-full flex flex-col border-b-[1px] border-dashed border-[#ABABAB]">
+        <section className="w-full flex flex-col border-b-[1px] border-dashed border-[#ABABAB] dark:border-[#444444]">
           {/* Header */}
           <div className="w-full flex flex-col px-6 py-[18px] md:px-[32px] md:py-[24px] gap-[8px]">
             <h1 className="font-sans font-normal text-[30px] text-[#0162EA] uppercase">PROJECTS</h1>
-            <p className="font-sans font-normal text-[14px] md:text-[16px] text-[#000000] leading-snug w-full max-w-[636px]">
+            <p className="font-sans font-normal text-[14px] md:text-[16px] text-[#000000] dark:text-[#E0E0E0] leading-snug w-full max-w-[636px]">
               Every project started with a simple question: &quot;Can I build this?&quot; Along the way, I learned new technologies, made countless mistakes, solved even more problems, and gained experience that no tutorial could ever teach.
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function Projects() {
         <Footer />
 
         {/* bottom space */}
-        <div className="h-[65px] w-full border-t-[1px] border-dashed border-[#ABABAB]"></div>
+        <div className="h-[65px] w-full border-t-[1px] border-dashed border-[#ABABAB] dark:border-[#444444]"></div>
 
       </div>
     </main>

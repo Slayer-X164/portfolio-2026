@@ -8,7 +8,7 @@ interface SectionTagProps {
 export function SectionTag({ text, width }: SectionTagProps) {
   return (
     <div className={`relative flex items-center justify-center h-[38px] ${width ? width : "w-max px-[20px]"}`}>
-      <div className="absolute top-[1px] bottom-[1px] left-[1px] right-[1px] bg-primary-light flex items-center justify-center">
+      <div className="absolute top-[1px] bottom-[1px] left-[1px] right-[1px] bg-primary-light dark:bg-blue-600/15 flex items-center justify-center">
         <span className="text-primary font-sans text-[18px] leading-none whitespace-nowrap">{text}</span>
       </div>
       {/* Top Left */}

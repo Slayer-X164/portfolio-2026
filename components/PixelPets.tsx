@@ -13,9 +13,9 @@ type PetType = {
 
 const PET_TYPES: PetType[] = [
   { folder: "1 Dog", size: 48, walkFrames: 6, idleFrames: 4, yOffset: 2, speed: 8 },
-  // { folder: "2 Dog 2", size: 48, walkFrames: 6, idleFrames: 4, yOffset: 2, speed: 12 },
+  { folder: "2 Dog 2", size: 48, walkFrames: 6, idleFrames: 4, yOffset: 2, speed: 12 },
   // { folder: "3 Cat", size: 48, walkFrames: 6, idleFrames: 4, yOffset: 2, speed: 10 },
-  { folder: "4 Cat 2", size: 48, walkFrames: 6, idleFrames: 4, yOffset: 2, speed: 6 },
+  // { folder: "4 Cat 2", size: 48, walkFrames: 6, idleFrames: 4, yOffset: 2, speed: 6 },
 
 ];
 
@@ -32,11 +32,11 @@ function Pet({ petData, initialX }: { petData: PetType; initialX: number }) {
       await controls.set({ left: `${currentX}%` });
 
       while (isMounted) {
-        const willWalk = Math.random() > 0.2;
+        const willWalk = Math.random() > 0.7; // 30% chance to walk
 
         if (!willWalk) {
           setState("idle");
-          const idleTime = Math.random() * 3000 + 1000;
+          const idleTime = Math.random() * 5000 + 3000; // Idle for 3-8 seconds
           await new Promise((r) => setTimeout(r, idleTime));
         } else {
           setState("walk");
